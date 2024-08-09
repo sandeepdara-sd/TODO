@@ -1,0 +1,167 @@
+/* Main container styles */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #e9ecef, #f8f9fa); /* Gradient background for a modern look */
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif; /* iOS and other modern fonts */
+    color: #495057; /* Dark gray text color for contrast */
+    transition: background 0.5s ease; /* Smooth background transition */
+}
+
+/* Form styling */
+.create_form {
+    background: #ffffff;
+    padding: 20px 30px; /* Extra padding for spaciousness */
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    width: 100%;
+    max-width: 500px; /* Increased maximum width for better readability */
+    animation: fadeInUp 0.5s ease-out; /* Smooth fade-in animation */
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: center; /* Center align inputs */
+}
+
+.create_form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* More rounded corners */
+    outline: none;
+    margin-bottom: 20px; /* Increased spacing between input and button */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth border color and shadow transition */
+}
+
+.create_form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2); /* Subtle shadow on focus */
+}
+
+.create_form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.create_form button:hover {
+    background-color: #0056b3;
+}
+
+.create_form button:active {
+    transform: scale(0.98);
+}
+
+/* Task styling */
+.task {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Increased maximum width for tasks */
+    justify-content: space-between;
+    background-color: #343a40;
+    color: white;
+    height: 60px; /* Increased height for better spacing */
+    padding: 15px 20px; /* More padding for a comfortable layout */
+    border-radius: 12px; /* More rounded corners */
+    margin-top: 15px; /* Increased spacing between tasks */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background color transition and slight hover effect */
+    animation: slideIn 0.5s ease-out; /* Smooth slide-in animation */
+    position: relative; /* For positioning the edit input */
+}
+
+/* Task editing input */
+.task.editing {
+    background-color: #f1f3f5; /* Lighter background color when editing */
+    border: 2px solid #007bff; /* Border to indicate editing */
+    padding: 10px 15px; /* Adjust padding */
+    color: #495057; /* Darker text color for readability */
+}
+
+.task.editing input {
+    width: calc(100% - 50px); /* Adjust width to fit within the task container */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px; /* Rounded corners for input field */
+    outline: none;
+    font-size: 16px;
+}
+
+.task.editing input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2); /* Subtle shadow on focus */
+}
+
+.task:hover {
+    background-color: #495057;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox .icon {
+    margin-right: 12px; /* Spacing for better layout */
+    font-size: 24px; /* Larger icon for better visibility */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.checkbox .icon:hover {
+    color: #adb5bd; /* Lighter gray color on hover */
+}
+
+.task div span {
+    margin: 0 12px; /* More spacing for readability */
+}
+
+.task div .icon {
+    cursor: pointer;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.task div .icon:hover {
+    color: #f8f9fa; /* Light color on hover */
+}
+
+.line-th {
+    text-decoration: line-through;
+    color: #6c757d; /* Light gray for completed tasks */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
